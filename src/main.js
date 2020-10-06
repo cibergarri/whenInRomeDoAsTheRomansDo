@@ -1,9 +1,9 @@
-const { getArabicNumber, getRomanNumber } = require("./util");
+const { getArabicNumber, getRomanNumber } = require('./util');
 
 function RomanNumber(number) {
   if (!new.target) return new RomanNumber(number);
 
-  if (typeof number === "string") {
+  if (typeof number === 'string') {
     this._roman = number;
     this._arabic = getArabicNumber(number);
   } else {

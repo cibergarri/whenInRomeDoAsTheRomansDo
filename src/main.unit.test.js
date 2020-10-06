@@ -32,10 +32,10 @@ describe('Main test', () => {
     });
 
     const romanValues = [
-      ["I", 1],
-      ["III", 3],
-      ["IV", 4],
-      ["V", 5],
+      ['I', 1],
+      ['III', 3],
+      ['IV', 4],
+      ['V', 5],
       ['CDXXIX', 429],
       ['MCDLXXXII', 1482],
       ['MCMLXXX', 1980],
