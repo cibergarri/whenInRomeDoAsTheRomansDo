@@ -5,7 +5,7 @@ const { ROMAN_CHARS_VALUES } = require('./constants');
 describe('Regex', () => {
   it('should return a valid regex', () => {
     expect(romanRegex).to.be.instanceOf(RegExp);
-  })
+  });
   it('should validate a valid roman number', async () => {
     expect(romanRegex.test('V')).to.be.eq(true);
   });
@@ -21,8 +21,8 @@ describe('Regex', () => {
       const { groups } = romanRegex.exec(romanChar);
       expect(groups[romanChar]).to.be.eq(romanChar);
     });
-  })
-  
+  });
+
   it('should return information for named groups mixed', () => {
     const { groups } = romanRegex.exec('MMCMLXXXIV');
     expect(groups.M).to.be.eq('MM');

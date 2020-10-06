@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 const { getArabicNumber, getRomanNumber } = require('./util');
 
 function RomanNumber(number) {
@@ -11,13 +12,12 @@ function RomanNumber(number) {
     this._roman = getRomanNumber(number);
   }
 
-  this.toInt = function () {
+  this.toInt = function toInt() {
     return this._arabic;
   };
-  this.toString = function () {
+  this.toString = function toString() {
     return this._roman;
   };
-
 }
 
 module.exports = RomanNumber;

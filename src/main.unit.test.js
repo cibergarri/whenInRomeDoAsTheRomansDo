@@ -4,15 +4,15 @@ const RomanNumber = require('./main');
 
 describe('Main test', () => {
   it('should export a function', async () => {
-    expect(typeof RomanNumber).to.be.eq('function')
+    expect(typeof RomanNumber).to.be.eq('function');
   });
   it('should return an instance of RomanNumber when called with new', async () => {
-    const romanNumber = new RomanNumber(1)
-    expect(romanNumber).to.be.instanceOf(RomanNumber)
+    const romanNumber = new RomanNumber(1);
+    expect(romanNumber).to.be.instanceOf(RomanNumber);
   });
   it('should return an instance of RomanNumber also when not called with new', async () => {
-    const romanNumber = RomanNumber(1)
-    expect(romanNumber).to.be.instanceOf(RomanNumber)
+    const romanNumber = RomanNumber(1);
+    expect(romanNumber).to.be.instanceOf(RomanNumber);
   });
 
   describe('conversion', () => {
@@ -23,13 +23,13 @@ describe('Main test', () => {
       [5, 'V'],
       [1968, 'MCMLXVIII'],
       [2999, 'MMCMXCIX'],
-      [3000, 'MMM']
+      [3000, 'MMM'],
     ];
     arabicValues.forEach(([arabic, roman]) => {
       it(`should initialize the number with ${arabic} and return ${roman}`, () => {
         const romanNumber = new RomanNumber(arabic);
         expect(romanNumber.toString()).to.be.eq(roman);
-      })
+      });
     });
 
     const romanValues = [
@@ -45,9 +45,9 @@ describe('Main test', () => {
       it(`should initialize the number with ${roman} and return ${arabic}`, () => {
         const romanNumber = new RomanNumber(roman);
         expect(romanNumber.toInt()).to.be.eq(arabic);
-      })
+      });
     });
-  })
+  });
   describe('errors', () => {
     it('should throw an error when called with null', async () => {
       expect(() => new RomanNumber(null)).to.throw(ERROR.VALUE_REQUIRED);
@@ -79,5 +79,5 @@ describe('Main test', () => {
     it('should throw an error when called with an invalid range (MMMMDMXCIX)', async () => {
       expect(() => new RomanNumber('MMMMDMXCIX')).to.throw(ERROR.INVALID_RANGE);
     });
-  })
-})
+  });
+});
