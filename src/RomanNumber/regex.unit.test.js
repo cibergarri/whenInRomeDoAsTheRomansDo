@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 const { romanRegex } = require('./regex');
-const { ROMAN_CHARS_VALUES } = require('./constants');
+const { ROMAN_CHARS_VALUES } = require('../constants');
 
 describe('Regex', () => {
   it('should return a valid regex', () => {

@@ -1,6 +1,6 @@
 const { expect } = require('chai');
-const { ERROR } = require('./constants');
-const RomanNumber = require('./main');
+const { ERROR } = require('../constants');
+const RomanNumber = require('.');
 
 describe('Main test', () => {
   it('should export a function', async () => {

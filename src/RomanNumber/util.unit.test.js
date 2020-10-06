@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { ERROR } = require('./constants');
+const { ERROR } = require('../constants');
 const { getArabicNumber, getRomanNumber } = require('./util');
 
 describe('Util', () => {

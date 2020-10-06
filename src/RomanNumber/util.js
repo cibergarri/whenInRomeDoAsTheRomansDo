@@ -1,5 +1,5 @@
 const { romanRegex } = require('./regex');
-const { ERROR, ROMAN_CHARS_VALUES: ROMAN_VALUES } = require('./constants');
+const { ERROR, ROMAN_CHARS_VALUES: ROMAN_VALUES } = require('../constants');
 
 /**
  * get Arabic number from a roman number
