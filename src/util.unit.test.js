@@ -42,6 +42,9 @@ describe('Util', () => {
       it('should throw an error if null value provided', () => {
         expect(() => getRomanNumber(null)).to.throw(ERROR.VALUE_REQUIRED);
       });
+      it('should throw an error if non-numeric value provided', () => {
+        expect(() => getRomanNumber('2019')).to.throw(ERROR.INVALID_VALUE);
+      });
       it('should throw an error if an out of range value is provided', () => {
         expect(() => getRomanNumber(5000)).to.throw(ERROR.INVALID_RANGE);
       });
