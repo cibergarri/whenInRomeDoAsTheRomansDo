@@ -1,0 +1,20 @@
+{
+  "name": "wheninromedoastheromansdo",
+  "version": "1.0.0",
+  "description": "Start date: 'Tue Oct 06 2020 23:08:14 GMT+0200 (GMT+02:00)'",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cibergarri/whenInRomeDoAsTheRomansDo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cibergarri/whenInRomeDoAsTheRomansDo/issues"
+  },
+  "homepage": "https://github.com/cibergarri/whenInRomeDoAsTheRomansDo#readme"
+}
