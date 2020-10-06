@@ -34,13 +34,13 @@ describe('Main test', () => {
     romanValues.forEach(([roman, arabic]) => {
       it(`should initialize the number with ${roman} and return ${arabic}`, () => {
         const romanNumber = new RomanNumber(roman);
-        expect(romanNumber.toInt()).to.be.eq(arabicValues);
+        expect(romanNumber.toInt()).to.be.eq(arabic);
       })
     });
   })
   describe('errors', () => {
     it('should throw an error when called with null', async () => {
-      expect(() => new RomanNumber('null')).to.throw('value required');
+      expect(() => new RomanNumber(null)).to.throw('value required');
     });
     it('should throw an error when called with empty string', async () => {
       expect(() => new RomanNumber('')).to.throw('value required');
