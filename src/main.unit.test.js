@@ -5,6 +5,15 @@ describe('Main test', () => {
   it('should export a function', async () => {
     expect(typeof RomanNumber).to.be.eq('function')
   });
+  it('should return an instance of RomanNumber when called with new', async () => {
+    const romanNumber = new RomanNumber(1)
+    expect(romanNumber).to.be.instanceOf(RomanNumber)
+  });
+  it('should return an instance of RomanNumber also when not called with new', async () => {
+    const romanNumber = RomanNumber(1)
+    expect(romanNumber).to.be.instanceOf(RomanNumber)
+  });
+
   describe('conversion', () => {
     const arabicValues = [
       [1, 'I'],
