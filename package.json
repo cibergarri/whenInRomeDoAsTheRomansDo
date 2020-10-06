@@ -4,6 +4,7 @@
   "description": "Start date: 'Tue Oct 06 2020 23:08:14 GMT+0200 (GMT+02:00)'",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --ext .js .",
     "start": "node src/main.js",
     "test": "mocha"
   },
@@ -19,6 +20,9 @@
   "homepage": "https://github.com/cibergarri/whenInRomeDoAsTheRomansDo#readme",
   "devDependencies": {
     "chai": "4.2.0",
+    "eslint": "7.10.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.22.1",
     "mocha": "8.1.3"
   }
 }
