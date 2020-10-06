@@ -1,4 +1,5 @@
 const { expect } = require('chai');
+const { ERROR } = require('./constants');
 const RomanNumber = require('./main');
 
 describe('Main test', () => {
@@ -49,34 +50,34 @@ describe('Main test', () => {
   })
   describe('errors', () => {
     it('should throw an error when called with null', async () => {
-      expect(() => new RomanNumber(null)).to.throw('value required');
+      expect(() => new RomanNumber(null)).to.throw(ERROR.VALUE_REQUIRED);
     });
     it('should throw an error when called with empty string', async () => {
-      expect(() => new RomanNumber('')).to.throw('value required');
+      expect(() => new RomanNumber('')).to.throw(ERROR.VALUE_REQUIRED);
     });
     it('should throw an error when called with zero (out of range)', async () => {
-      expect(() => new RomanNumber(0)).to.throw('invalid range');
+      expect(() => new RomanNumber(0)).to.throw(ERROR.INVALID_RANGE);
     });
     it('should throw an error when called with an invalid value (error)', async () => {
-      expect(() => new RomanNumber('error')).to.throw('invalid value');
+      expect(() => new RomanNumber('error')).to.throw(ERROR.INVALID_VALUE);
     });
     it('should throw an error when called with an invalid value (IIII)', async () => {
-      expect(() => new RomanNumber('IIII')).to.throw('invalid value');
+      expect(() => new RomanNumber('IIII')).to.throw(ERROR.INVALID_VALUE);
     });
     it('should throw an error when called with an invalid value (CD1X)', async () => {
-      expect(() => new RomanNumber('CD1X')).to.throw('invalid value');
+      expect(() => new RomanNumber('CD1X')).to.throw(ERROR.INVALID_VALUE);
     });
     it('should throw an error when called with a number string', async () => {
-      expect(() => new RomanNumber('1473')).to.throw('invalid value');
+      expect(() => new RomanNumber('1473')).to.throw(ERROR.INVALID_VALUE);
     });
     it('should throw an error when called with an invalid range (10000)', async () => {
-      expect(() => new RomanNumber(10000)).to.throw('invalid range');
+      expect(() => new RomanNumber(10000)).to.throw(ERROR.INVALID_RANGE);
     });
     it('should throw an error when called with an invalid range (MMMMCMXCIX)', async () => {
-      expect(() => new RomanNumber('MMMMCMXCIX')).to.throw('invalid range');
+      expect(() => new RomanNumber('MMMMCMXCIX')).to.throw(ERROR.INVALID_RANGE);
     });
     it('should throw an error when called with an invalid range (MMMMDMXCIX)', async () => {
-      expect(() => new RomanNumber('MMMMDMXCIX')).to.throw('invalid range');
+      expect(() => new RomanNumber('MMMMDMXCIX')).to.throw(ERROR.INVALID_RANGE);
     });
   })
 })

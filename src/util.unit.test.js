@@ -1,4 +1,5 @@
 const { expect } = require('chai');
+const { ERROR } = require('./constants');
 const { getArabicNumber, getRomanNumber } = require('./util');
 
 describe('Util', () => {
@@ -11,19 +12,19 @@ describe('Util', () => {
     });
     describe('errors', () => {
       it('should throw an error if no value provided', () => {
-        expect(() => getArabicNumber()).to.throw('value required');
+        expect(() => getArabicNumber()).to.throw(ERROR.VALUE_REQUIRED);
       })
       it('should throw an error if null value provided', () => {
-        expect(() => getArabicNumber(null)).to.throw('value required');
+        expect(() => getArabicNumber(null)).to.throw(ERROR.VALUE_REQUIRED);
       })
       it('should throw an error if a non valid type provided', () => {
-        expect(() => getArabicNumber({})).to.throw('invalid value');
+        expect(() => getArabicNumber({})).to.throw(ERROR.INVALID_VALUE);
       })
       it('should throw an error if an invalid roman number provided', () => {
-        expect(() => getArabicNumber('XLXXX')).to.throw('invalid value');
+        expect(() => getArabicNumber('XLXXX')).to.throw(ERROR.INVALID_VALUE);
       })
       it('should throw an error if an out of range value is provided', () => {
-        expect(() => getArabicNumber('MMMMXXX')).to.throw('invalid range');
+        expect(() => getArabicNumber('MMMMXXX')).to.throw(ERROR.INVALID_RANGE);
       })
     });
   })
@@ -36,16 +37,16 @@ describe('Util', () => {
     });
     describe('errors', () => {
       it('should throw an error if no value provided', () => {
-        expect(() => getRomanNumber()).to.throw('value required');
+        expect(() => getRomanNumber()).to.throw(ERROR.VALUE_REQUIRED);
       })
       it('should throw an error if null value provided', () => {
-        expect(() => getRomanNumber(null)).to.throw('value required');
+        expect(() => getRomanNumber(null)).to.throw(ERROR.VALUE_REQUIRED);
       })
       it('should throw an error if an out of range value is provided', () => {
-        expect(() => getRomanNumber(5000)).to.throw('invalid range');
+        expect(() => getRomanNumber(5000)).to.throw(ERROR.INVALID_RANGE);
       })
       it('should throw an error if an out of range value is provided', () => {
-        expect(() => getRomanNumber(-100)).to.throw('invalid range');
+        expect(() => getRomanNumber(-100)).to.throw(ERROR.INVALID_RANGE);
       })
     });
   })

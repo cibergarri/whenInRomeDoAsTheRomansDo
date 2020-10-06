@@ -14,6 +14,13 @@ const ROMAN_CHARS_VALUES = {
   I: 1
 };
 
+const ERROR = {
+  INVALID_RANGE: 'invalid range',
+  INVALID_VALUE: 'invalid value',
+  VALUE_REQUIRED: 'value required',
+};
+
 module.exports = {
-  ROMAN_CHARS_VALUES
+  ERROR,
+  ROMAN_CHARS_VALUES,
 };
